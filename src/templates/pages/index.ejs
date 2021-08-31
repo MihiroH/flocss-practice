@@ -1,0 +1,15 @@
+<%-
+  include('./_template', {
+    fileName: 'index',
+    link,
+    container
+  })
+%>
+
+<% function link(__append) { %>
+  <link rel="stylesheet" href="<%= `${cssPath}/top.css`%>">
+<% } %>
+
+<% function container(__append) { %>
+  This is the container!!
+<% } %>
