@@ -1,7 +1,7 @@
 const gulp = require('gulp');
 const rename = require('gulp-rename');
 
-const { static: config } = require('./config');
+const { assetRoot, static: config } = require('./config');
 
 exports.copy = callback => {
   gulp
@@ -15,7 +15,7 @@ exports.copy = callback => {
     .pipe(gulp.dest(config.dest));
 
   gulp
-    .src(config.assets)
+    .src(config.assets, { base: assetRoot })
     .pipe(gulp.dest(config.dest));
 
   callback();
