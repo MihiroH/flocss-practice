@@ -2,7 +2,8 @@
   include('./_template', {
     fileName: 'index',
     link,
-    container
+    container,
+    script
   })
 %>
 
@@ -11,7 +12,7 @@
 <% } %>
 
 <% function container(__append) { %>
-  <div class="l-mv">
+  <div class="l-mv" data-js="mv">
     <h1 class="l-mv__title">
       <a href="/">
         <img src="<%= `${imgPath}/img_logo_title.svg` %>" alt="BanaBoardこだわりの麺" />
@@ -100,3 +101,8 @@
     </a>
   </section>
 <% } %>
+
+<% function script(__append) { %>
+ <script src="<%= `${jsPath}/script.js?${TIMESTAMP}` %>"></script>
+<% } %>
+
