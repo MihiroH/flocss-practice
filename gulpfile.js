@@ -1,12 +1,14 @@
 const gulp = require('gulp');
 
 const {
+  ts: tsConfig,
   sass: sassConfig,
   templates: templatesConfig,
   static: staticConfig,
 } = require('./tasks/config');
 
 const { reload, serve } = require('./tasks/server');
+const { ts } = require('./tasks/scripts');
 const { sass } = require('./tasks/styles');
 const { templates } = require('./tasks/templates');
 const { copy } = require('./tasks/copy');
@@ -16,7 +18,10 @@ const { clean } = require('./tasks/clean');
  * ファイルの変更を監視
  */
 const watchFiles = () => {
-  // sass
+  // Scripts
+  gulp.watch(tsConfig.src, gulp.series(ts, reload));
+
+  // Sass
   gulp.watch(sassConfig.src, gulp.series(sass, reload));
 
   // Templates
@@ -37,7 +42,7 @@ const watchFiles = () => {
  */
 gulp.task('default', gulp.series(
   clean,
-  gulp.parallel(sass, templates, copy),
+  gulp.parallel(ts, sass, templates, copy),
   serve,
   watchFiles
 ));
@@ -47,5 +52,5 @@ gulp.task('default', gulp.series(
  */
 gulp.task('build', gulp.series(
   clean,
-  gulp.parallel(sass, templates, copy)
+  gulp.parallel(ts, sass, templates, copy)
 ));
