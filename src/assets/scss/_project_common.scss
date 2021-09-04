@@ -1,0 +1,78 @@
+/* Common parts in Project
+   ----------------------------------------------------------------- */
+@import "_config";
+
+/* Logo
+   ----------------------------------------------------------------- */
+.p-logo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  margin-right: auto;
+  margin-left: auto;
+  @include sp {
+    width: vw(340px);
+    margin-top: vw(100px);
+  }
+  @include pc {
+    width: 716px;
+    margin-top: 68px;
+  }
+}
+
+/* SNS List
+   ----------------------------------------------------------------- */
+.p-sns-list {
+  display: flex;
+  justify-content: space-between;
+
+  &--vertical-sp {
+    @include sp {
+      display: block;
+    }
+  }
+
+  &__item {
+    @include sp {
+      width: vw(48px);
+    }
+    @include pc {
+      width: 48px;
+    }
+
+    &:hover {
+      @include pc {
+        @include opacity;
+      }
+    }
+
+    &:active {
+      @include sp {
+        @include opacity;
+      }
+    }
+
+    &:not(:first-child) {
+      @include sp {
+        margin: 0 0 0 vw(16px);
+      }
+      @include pc {
+        margin: 0 0 0 16px;
+      }
+    }
+
+    &--vertical-sp {
+      &:not(:first-child) {
+        @include sp {
+          margin: vw(8px) 0 0 0;
+        }
+      }
+    }
+
+    a {
+      display: block;
+    }
+  }
+}

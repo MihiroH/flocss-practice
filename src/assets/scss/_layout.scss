@@ -1,0 +1,188 @@
+/* Layout
+   ----------------------------------------------------------------- */
+@import "_config";
+
+/* Wrapper
+   ----------------------------------------------------------------- */
+.l-wrap {
+  @include pc {
+    min-width: 1280px;
+  }
+}
+
+.l-container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Main visual
+   ----------------------------------------------------------------- */
+.l-mv {
+  position: relative;
+  z-index: 1;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  @include sp {
+    background-image: url($img_path + "/sp/img_mv.png");
+  }
+  @include pc {
+    background-image: url($img_path + "/img_mv.png");
+  }
+
+  &__title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    @include sp {
+      margin: vw(16px) 0 0 vw(15px);
+      width: vw(107px);
+    }
+    @include pc {
+      margin: 24px 0 0 31px;
+      width: 162px;
+    }
+
+    a {
+      display: block;
+    }
+  }
+
+  &__guide {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    @include sp {
+      margin-left: vw(14px);
+    }
+    @include pc {
+      margin-left: 45px;
+    }
+
+    @keyframes bar {
+      0% {
+        top: -100%;
+      }
+
+      to {
+        top: 100%;
+      }
+    }
+
+    &__bar {
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+      width: 2px;
+      background: $color_black;
+      margin-right: auto;
+      margin-left: auto;
+      @include sp {
+        height: vw(55px);
+        margin-top: vw(10px);
+      }
+      @include pc {
+        height: 55px;
+        margin-top: 10px;
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        display: block;
+        background: $color_white;
+        top: 50%;
+        animation: bar 2.5s cubic-bezier(.23, 1, .32, 1) infinite;
+        z-index: 1;
+        height: 12px;
+      }
+    }
+  }
+
+  &__sns-list {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    @include sp {
+      margin: 0 vw(10px) vw(16px) 0;
+    }
+    @include pc {
+      margin: 0 44px 16px 0;
+    }
+  }
+}
+
+/* Footer
+   ----------------------------------------------------------------- */
+.l-footer {
+  position: relative;
+  z-index: 1;
+  @include sp {
+    margin-top: vw(144px);
+  }
+  @include pc {
+    margin-top: 156px;
+  }
+
+  &__about {
+    @include pc {
+      width: 1092px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__sns-list {
+    @include sp {
+      margin: auto;
+      width: vw(176px);
+    }
+  }
+
+  &__contact {
+    border: 1px solid $color_black;
+    background: $color_white;
+    text-align: center;
+    display: block;
+    @include sp {
+      margin: vw(48px) auto 0;
+      padding: vw(19px) 0 vw(18px);
+      width: vw(280px);
+      font-size: vw(16px);
+    }
+    @include pc {
+      padding: 19px 0 18px;
+      width: 280px;
+      font-size: 16px;
+    }
+
+    &:hover {
+      @include opacity;
+    }
+
+    &:active {
+      @include opacity;
+    }
+  }
+
+  &__copyright {
+    background: #eaeaea;
+    text-align: center;
+    @include sp {
+      padding: vw(26px) 0 vw(27px);
+      font-size: vw(12px);
+      margin-top: 80px;
+    }
+    @include pc {
+      padding: 16px 0 17px;
+      font-size: 12px;
+      margin-top: 79px;
+    }
+  }
+}

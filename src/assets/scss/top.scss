@@ -1,1 +1,132 @@
-@import "_import";
+/* Top
+   ----------------------------------------------------------------- */
+@import "_global";
+
+/* Menu
+   ----------------------------------------------------------------- */
+.p-menu {
+  @include sp {
+    margin-top: vw(48px);
+  }
+  @include pc {
+    margin-top: 92px;
+  }
+
+  &__title {
+    @include sp {
+      font-size: vw(28px);
+      padding-left: vw(10px);
+    }
+    @include pc {
+      font-size: 48px;
+      margin: auto;
+      width: 1192px;
+    }
+  }
+
+  &__list {
+    @include sp {
+      margin-top: vw(36px);
+    }
+    @include pc {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 36px auto 0;
+      width: 1192px;
+    }
+  }
+
+  &__item {
+    @include sp {
+      width: vw(355px);
+
+      &:not(:first-child) {
+        margin-top: vw(48px);
+      }
+
+      &:nth-child(odd) {
+        margin-right: auto;
+      }
+
+      &:nth-child(even) {
+        margin-left: auto;
+      }
+    }
+    @include pc {
+      width: 384px;
+
+      &:not(:first-child) {
+        margin-left: 20px;
+      }
+
+      &:nth-child(3n + 1) {
+        margin-left: 0;
+      }
+
+      &:nth-child(n + 4) {
+        margin-top: 36px;
+      }
+    }
+  }
+
+  &__more {
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    @include sp {
+      margin-top: vw(74px);
+      border: 1px solid $color_black;
+      text-align: center;
+      width: vw(280px);
+      padding: vw(19px) 0 vw(18px);
+      position: relative;
+      z-index: 1;
+      background: $color_white;
+    }
+    @include pc {
+      margin-top: 82px;
+      width: 102px;
+      display: flex;
+      align-items: center;
+    }
+
+    &:hover {
+      @include opacity;
+    }
+
+    &:active {
+      @include opacity;
+    }
+
+    &__text {
+      @include sp {
+        font-size: vw(16px);
+      }
+      @include pc {
+        font-size: 16px;
+        flex-shrink: 0;
+      }
+    }
+
+    &__arrow {
+      border-top: 1px solid $color_black;
+      border-right: 1px solid $color_black;
+      @include sp {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        z-index: 1;
+        margin-right: vw(24px);
+        width: vw(10px);
+        height: vw(10px);
+        transform: translateY(-50%) rotate(45deg);
+      }
+      @include pc {
+        margin-left: 8px;
+        width: 10px;
+        height: 10px;
+        transform: rotate(45deg);
+      }
+    }
+  }
+}

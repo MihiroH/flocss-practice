@@ -1,0 +1,40 @@
+/* Component
+   ----------------------------------------------------------------- */
+/* Card
+   ----------------------------------------------------------------- */
+.c-card {
+  display: block;
+
+  &:hover {
+    .c-card__img img {
+      @include zoom;
+    }
+  }
+
+  &:active {
+    .c-card__img img {
+      @include zoom;
+    }
+  }
+
+  &__img {
+    overflow: hidden;
+  }
+
+  &__name {
+    text-align: center;
+    line-height: 1.4;
+    @include sp {
+      font-size: vw(14px);
+      margin-top: vw(10px);
+    }
+    @include pc {
+      font-size: 16px;
+      margin-top: 10px;
+    }
+  }
+
+  img {
+    transition: transform .3s;
+  }
+}
