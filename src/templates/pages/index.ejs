@@ -1,0 +1,108 @@
+<%-
+  include('./_template', {
+    fileName: 'index',
+    link,
+    container,
+    script
+  })
+%>
+
+<% function link(__append) { %>
+  <link rel="stylesheet" href="<%= `${cssPath}/top.css`%>">
+<% } %>
+
+<% function container(__append) { %>
+  <div class="l-mv" data-js="mv">
+    <h1 class="l-mv__title">
+      <a href="/">
+        <img src="<%= `${imgPath}/img_logo_title.svg` %>" alt="BanaBoardこだわりの麺" />
+      </a>
+    </h1>
+    <div class="l-mv__guide">
+      <div class="l-mv__guide__text">
+        <img src="<%= `${imgPath}/img_text_scroll.svg` %>" alt="SCROLL" />
+      </div>
+      <div class="l-mv__guide__bar"></div>
+    </div>
+    <ul class="l-mv__sns-list p-sns-list p-sns-list--vertical-sp">
+      <li class="p-sns-list__item p-sns-list__item--vertical-sp">
+        <a href="#">
+          <img src="<%= `${imgPath}/icon_instagram.svg` %>" alt="SNS(Instagram)" />
+        </a>
+      </li>
+      <li class="p-sns-list__item p-sns-list__item--vertical-sp">
+        <a href="#">
+          <img src="<%= `${imgPath}/icon_youtube.svg` %>" alt="SNS(Youtube)" />
+        </a>
+      </li>
+      <li class="p-sns-list__item p-sns-list__item--vertical-sp">
+        <a href="#">
+          <img src="<%= `${imgPath}/icon_twitter.svg` %>" alt="SNS(Twitter)" />
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <section class="p-menu">
+    <h2 class="p-menu__title">Menu</h2>
+    <ul class="p-menu__list">
+      <li class="p-menu__item">
+        <a href="#" class="c-card">
+          <div class="c-card__img">
+            <img src="<%= `${imgPath}/img_pizza_tomato.jpg` %>" alt="ピザ(トマト)" />
+          </div>
+          <p class="c-card__name">ピザ</p>
+        </a>
+      </li>
+      <li class="p-menu__item">
+        <a href="#" class="c-card">
+          <div class="c-card__img">
+            <img src="<%= `${imgPath}/img_pizza_seafood.jpg` %>" alt="ピザ(シーフード)" />
+          </div>
+          <p class="c-card__name">ピザ</p>
+        </a>
+      </li>
+      <li class="p-menu__item">
+        <a href="#" class="c-card">
+          <div class="c-card__img">
+            <img src="<%= `${imgPath}/img_cheese.jpg` %>" alt="チーズ" />
+          </div>
+          <p class="c-card__name">チーズ</p>
+        </a>
+      </li>
+      <li class="p-menu__item">
+        <a href="#" class="c-card">
+          <div class="c-card__img">
+            <img src="<%= `${imgPath}/img_pasta_tomato.jpg` %>" alt="パスタ(トマト)" />
+          </div>
+          <p class="c-card__name">パスタ</p>
+        </a>
+      </li>
+      <li class="p-menu__item">
+        <a href="#" class="c-card">
+          <div class="c-card__img">
+            <img src="<%= `${imgPath}/img_pasta_cream.jpg` %>" alt="パスタ(クリーム)" />
+          </div>
+          <p class="c-card__name">パスタ</p>
+        </a>
+      </li>
+      <li class="p-menu__item">
+        <a href="#" class="c-card">
+          <div class="c-card__img">
+            <img src="<%= `${imgPath}/img_pasta_short.jpg` %>" alt="パスタ(ショート)" />
+          </div>
+          <p class="c-card__name">パスタ</p>
+        </a>
+      </li>
+    </ul>
+    <a href="#" class="p-menu__more">
+      <span class="p-menu__more__text">VIEW ALL</span>
+      <span class="p-menu__more__arrow"></span>
+    </a>
+  </section>
+<% } %>
+
+<% function script(__append) { %>
+ <script src="<%= `${jsPath}/script.js?${TIMESTAMP}` %>"></script>
+<% } %>
+

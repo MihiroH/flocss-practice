@@ -1,0 +1,31 @@
+/* Base
+   ----------------------------------------------------------------- */
+body {
+  font-family: "Noto Serif JP", serif;
+  color: $color_black;
+}
+
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  text-decoration: none;
+  color: inherit;
+}
+
+input,
+button {
+  appearance: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img {
+  vertical-align: middle;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
