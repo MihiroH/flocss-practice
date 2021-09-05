@@ -18,7 +18,7 @@
       "npm run lint:scripts"
     ],
     "./**/*.scss": [
-      "npm run lint:fix:style"
+      "npm run lint:fix:styles"
     ]
   },
   "repository": {
