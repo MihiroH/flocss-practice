@@ -3,6 +3,7 @@ const gulp = require('gulp');
 const {
   ts: tsConfig,
   sass: sassConfig,
+  svg: svgConfig,
   templates: templatesConfig,
   static: staticConfig,
 } = require('./tasks/config');
@@ -10,6 +11,7 @@ const {
 const { reload, serve } = require('./tasks/server');
 const { ts } = require('./tasks/scripts');
 const { sass } = require('./tasks/styles');
+const { svg } = require('./tasks/svg');
 const { templates } = require('./tasks/templates');
 const { copy } = require('./tasks/copy');
 const { clean } = require('./tasks/clean');
@@ -23,6 +25,9 @@ const watchFiles = () => {
 
   // Sass
   gulp.watch(sassConfig.src, gulp.series(sass, reload));
+
+  // Svg
+  gulp.watch(svgConfig.src, gulp.series(svg, reload));
 
   // Templates
   gulp.watch(
@@ -42,7 +47,7 @@ const watchFiles = () => {
  */
 gulp.task('default', gulp.series(
   clean,
-  gulp.parallel(ts, sass, templates, copy),
+  gulp.parallel(ts, sass, svg, templates, copy),
   serve,
   watchFiles
 ));
@@ -52,5 +57,5 @@ gulp.task('default', gulp.series(
  */
 gulp.task('build', gulp.series(
   clean,
-  gulp.parallel(ts, sass, templates, copy)
+  gulp.parallel(ts, sass, svg, templates, copy)
 ));

@@ -16,6 +16,11 @@ module.exports = {
     dest: `${DEST_ROOT}/assets/css`
   },
 
+  svg: {
+    src: `${ASSET_ROOT}/assets/img/**/*.svg`,
+    dest: `${DEST_ROOT}/assets/img`
+  },
+
   templates: {
     ejs: `${ASSET_ROOT}/templates/**/*.ejs`,
     pages: [`${ASSET_ROOT}/templates/pages/**/*.ejs`, `!${ASSET_ROOT}/templates/pages/**/_*.ejs`],
@@ -31,7 +36,8 @@ module.exports = {
     assets: [
       `${ASSET_ROOT}/assets/**/*`,
       `!${ASSET_ROOT}/assets/scss/**`,
-      `!${ASSET_ROOT}/assets/js/**`
+      `!${ASSET_ROOT}/assets/js/**`,
+      `!${ASSET_ROOT}/assets/img/**/*.svg`
     ],
     dest: DEST_ROOT
   }
