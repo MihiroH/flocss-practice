@@ -1,0 +1,14 @@
+<svg id="icon_youtube" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+  <g id="Layer_4_copy_2">
+    <g id="Group_11" data-name="Group 11">
+      <circle id="Ellipse_7" data-name="Ellipse 7" cx="24" cy="24" r="24" fill="#d3d3d3"/>
+      <circle id="Ellipse_8" data-name="Ellipse 8" cx="21.809" cy="21.809" r="21.809" transform="translate(2.191 2.191)" fill="#fff"/>
+      <circle id="Ellipse_9" data-name="Ellipse 9" cx="19.597" cy="19.597" r="19.597" transform="translate(4.403 4.403)"/>
+    </g>
+  </g>
+  <g id="Official_copy_3" transform="translate(16.519 18.388)">
+    <g id="Group_12" data-name="Group 12">
+      <path id="Path_9" data-name="Path 9" d="M23.331,12.81a3.6,3.6,0,0,0-.594-1.585,2.065,2.065,0,0,0-1.5-.675C19.144,10.388,16,10.388,16,10.388H16s-3.14,0-5.234.162a2.066,2.066,0,0,0-1.5.675,3.61,3.61,0,0,0-.595,1.585,25.639,25.639,0,0,0-.15,2.582V16.6a25.646,25.646,0,0,0,.15,2.583,3.6,3.6,0,0,0,.594,1.584,2.444,2.444,0,0,0,1.649.682c1.2.123,5.088.161,5.088.161s3.144-.006,5.237-.166a2.071,2.071,0,0,0,1.5-.676,3.6,3.6,0,0,0,.594-1.583,25.646,25.646,0,0,0,.15-2.583v-1.21A25.822,25.822,0,0,0,23.331,12.81Zm-9.2,6V13.194L18.808,16Z" transform="translate(-8.519 -10.388)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

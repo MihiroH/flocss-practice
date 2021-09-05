@@ -6,10 +6,19 @@ module.exports = {
   assetRoot: ASSET_ROOT,
   destRoot: DEST_ROOT,
 
+  ts: {
+    src: `${ASSET_ROOT}/assets/js/**/*.ts`,
+    dest: `${DEST_ROOT}/assets/js`
+  },
+
   sass: {
-    root: `${ASSET_ROOT}/assets/scss/**`,
     src: `${ASSET_ROOT}/assets/scss/**/*.scss`,
     dest: `${DEST_ROOT}/assets/css`
+  },
+
+  svg: {
+    src: `${ASSET_ROOT}/assets/img/**/*.svg`,
+    dest: `${DEST_ROOT}/assets/img`
   },
 
   templates: {
@@ -24,7 +33,12 @@ module.exports = {
 
   static: {
     src: `${ASSET_ROOT}/static/**/*`,
-    assets: [`${ASSET_ROOT}/assets/**/*`, `!${ASSET_ROOT}/assets/scss/**`],
+    assets: [
+      `${ASSET_ROOT}/assets/**/*`,
+      `!${ASSET_ROOT}/assets/scss/**`,
+      `!${ASSET_ROOT}/assets/js/**`,
+      `!${ASSET_ROOT}/assets/img/**/*.svg`
+    ],
     dest: DEST_ROOT
   }
 }
