@@ -24,10 +24,10 @@
   background-size: cover;
   height: 100vh;
   @include sp {
-    background-image: url($img_path + "/sp/img_mv.png");
+    background-image: url($img_path + "/sp/img_mv.jpg");
   }
   @include pc {
-    background-image: url($img_path + "/img_mv.png");
+    background-image: url($img_path + "/img_mv.jpg");
   }
 
   &__title {
