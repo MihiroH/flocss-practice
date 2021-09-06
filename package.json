@@ -44,6 +44,7 @@
     "gulp-clean-css": "^4.3.0",
     "gulp-ejs": "^5.1.0",
     "gulp-noop": "^1.0.1",
+    "gulp-notify": "^4.0.0",
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^8.0.0",
     "gulp-prettier": "^4.0.0",
@@ -52,6 +53,7 @@
     "gulp-sourcemaps": "^3.0.0",
     "gulp-svgo": "^2.2.1",
     "gulp-typescript": "^6.0.0-alpha.1",
+    "gulp-uglify": "^3.0.2",
     "husky": "^7.0.2",
     "lint-staged": "^11.1.2",
     "prettier": "^2.3.2",
@@ -61,8 +63,5 @@
     "stylelint-prettier": "^1.2.0",
     "typescript": "^4.4.2"
   },
-  "dependencies": {
-    "gulp-notify": "^4.0.0",
-    "gulp-uglify": "^3.0.2"
-  }
+  "dependencies": {}
 }
