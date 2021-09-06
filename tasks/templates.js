@@ -6,16 +6,16 @@ const ejs = require('gulp-ejs');
 const prettier = require('gulp-prettier');
 const rename = require('gulp-rename');
 
-const config = require('./config');
+const { templates: config } = require('./config');
 
 exports.templates = () => {
   return gulp
-    .src(config.templates.pages)
+    .src(config.pages)
     .pipe(plumber({ errorHandler: notify.onError('Error: <%= error.message %>') }))
     .pipe(ejs({
-      ROOT: config.templates.startPath,
+      ROOT: config.startPath,
       TIMESTAMP: Date.now(),
-      meta: JSON.parse(fs.readFileSync(config.templates.data.meta, 'utf-8'))
+      meta: JSON.parse(fs.readFileSync(config.data.meta, 'utf-8'))
     }))
     .pipe(rename(path => {
       if (path.basename !== 'index') {
@@ -25,5 +25,5 @@ exports.templates = () => {
       path.extname = '.html';
     }))
     .pipe(prettier())
-    .pipe(gulp.dest(config.templates.dest));
+    .pipe(gulp.dest(config.dest));
 }
